@@ -49,7 +49,7 @@ module.exports = {
             ],
             "/page-data/*.json": [
               "cache-control: public",
-              "cache-control: max-age=0",
+              "cache-control: max-age=100",
               "cache-control: must-revalidate",
             ],
             "/app-data.json": [
