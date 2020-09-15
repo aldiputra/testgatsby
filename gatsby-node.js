@@ -1,6 +1,5 @@
 const Promise = require('bluebird')
 const path = require('path')
-const fs = require('fs')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -40,23 +39,4 @@ exports.createPages = ({ graphql, actions }) => {
       })
     )
   })
-}
-
-jsonFile = fs.readFileSync('static.json');
-staticJson = JSON.parse(jsonFile);
-var root = staticJson['root'];
-var header = staticJson['header'];
-
-exports.onCreateDevServer = ({ app }) => {
-  app.use(function (req, res, next) {
-    console.log("Request = ",req.url);
-    for(var itemHeader in header){
-      re = globToRegExp(itemHeader);
-      var isSet = re.test(req.url);
-      if(isSet){
-        res.set(header[itemHeader]);
-      }
-    }
-      next();
-  });
 }
