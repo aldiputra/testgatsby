@@ -1,0 +1,46 @@
+[
+  {
+    "ts": "2020-09-09T16:35:39.184Z",
+    "level": "error",
+    "error": {
+      "originalError": {
+        "message": "Client network socket disconnected before secure TLS connection was established",
+        "name": "Error",
+        "stack": "Error: Client network socket disconnected before secure TLS connection was established\n    at TLSSocket.onConnectEnd (_tls_wrap.js:1125:19)\n    at Object.onceWrapper (events.js:286:20)\n    at TLSSocket.emit (events.js:203:15)\n    at endReadableNT (_stream_readable.js:1145:12)\n    at process._tickCallback (internal/process/next_tick.js:63:19)",
+        "config": {
+          "url": "jvlr7xlhiu9o",
+          "method": "get",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/7.9.6; feature library-import; sdk contentful-management.js/6.1.1; platform node.js/v10.22.0; os macOS/19.6.0;",
+            "Authorization": "Bearer ...Kp-Y0",
+            "user-agent": "node.js/v10.22.0",
+            "Accept-Encoding": "gzip"
+          },
+          "proxy": false,
+          "baseURL": "https://api.contentful.com:443/spaces/",
+          "transformRequest": [
+            null
+          ],
+          "transformResponse": [
+            null
+          ],
+          "timeout": 30000,
+          "adapter": false,
+          "xsrfCookieName": "XSRF-TOKEN",
+          "xsrfHeaderName": "X-XSRF-TOKEN",
+          "maxContentLength": 1073741824,
+          "httpAgent": false,
+          "httpsAgent": false
+        },
+        "code": "ECONNRESET"
+      },
+      "stacktrace": [
+        "Error: Error: Client network socket disconnected before secure TLS connection was established",
+        "/Users/aldi_p/contentful-starter-ratih/node_modules/contentful-batch-libs/dist/listr.js:24:27",
+        "process._tickCallback (internal/process/next_tick.js:68:7)"
+      ]
+    }
+  }
+]
